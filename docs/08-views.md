@@ -6,7 +6,7 @@ In Elemental PHP framework, it is not practical to return entire HTML document s
 
 Views play a crucial role in separating controller/application logic from presentation concerns and are stored in the `app/views` directory. These view files, written in PHP, encapsulate the markup. Consider a basic example of a view:
 
-```php
+```html
 <html>
 <body>
   <h1>Hello, <?= $name ?></h1>
@@ -49,7 +49,7 @@ Elemental provides a convenient way to maintain the same layout across multiple 
 
 Below is a basic example:
 
-```html
+```php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,7 +69,7 @@ A view can be returned with a layout like this:
 ```php
 public function compose()
 {
-  return view("Compose")->withLayout("layouts.DashboardLayout");
+    return view("Compose")->withLayout("layouts.DashboardLayout");
 }
 ```
 
@@ -79,7 +79,7 @@ Elemental offers a powerful approach to crafting views. Every view is essentiall
 
 Example component file (`views/components/Logo.php`):
 
-```php
+```html
 <a class="logo" href="/">
   <span class="logo-img">
     <img src="logo.png" class="logo-text">
@@ -90,7 +90,7 @@ Example component file (`views/components/Logo.php`):
 
 This component can be used inside any other view file. For example, in `views/Login.php`:
 
-```php
+```html
 <div>
   <?= component("components.Logo") ?>
   <p>Welcome Back!</p>
