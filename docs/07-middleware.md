@@ -57,7 +57,8 @@ class AfterMiddleware
     public function handle(Request $request, Closure $next)
     {
         $response = $next($request);
-        // Perform action
+
+        // Middleware logic
 
         return $response;
     }
