@@ -21,7 +21,8 @@ use Core\Config\Config;
 
 class YourClass {
 
-    public function __construct(Config $config) {
+    public function __construct(Config $config)
+    {
         $driver = $config->db["driver"];
         $host = $config->db["host"];
         $port = $config->db["port"];
