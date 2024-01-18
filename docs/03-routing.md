@@ -38,8 +38,8 @@ You can register routes that respond to any HTTP verb using the following method
 Sometimes you will need to capture segments of the URI within your route. For example, you may need to capture a user's ID from the URL. You may do so by defining route parameters:
 
 ```php
-Route::get('/user/{id}', function (string $id) {
-    return 'User ' . $id;
+Route::get("/user/{id}", function (string $id) {
+    return "User " . $id;
 });
 
 Route::get("/story/{id}", function ($id) {/*...*/});
@@ -67,7 +67,7 @@ For instance, if you type-hint `Core\Request\Request` within the callback, Eleme
 
 use Core\Request\Request;
 
-Route::get('/users', function (Request $request) {
+Route::get("/users", function (Request $request) {
     // ...
 });
 ```
@@ -85,7 +85,7 @@ In the context of routes or controller actions, models are defined using type-hi
 ```php
 use App\Models\User;
 
-Route::get('/users/{user}', function  (User  $user) {
+Route::get("/users/{user}", function  (User  $user) {
 
 return  $user->email;
 
@@ -99,7 +99,7 @@ Sometimes you may wish to resolve models using a column other than `id`. To do s
 ```php
 use App\Models\User;
 
-Route::get('/users/{user:email}', function  (User $user) {
+Route::get("/users/{user:email}", function  (User $user) {
     return  $user;
 });
 ```

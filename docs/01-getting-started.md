@@ -36,7 +36,7 @@ cd sample-app
 php candle ignite
 ```
 
-Voila! Your application is now accessible at [http://127.0.0.1:8000](http://127.0.0.1:8000/).
+Voila! Your application is now accessible at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
 We've taken care of the basic setup so you can focus on the magic.
 
