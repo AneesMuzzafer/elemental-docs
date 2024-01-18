@@ -61,5 +61,5 @@ The `component` function is used to return a view as a component to be used insi
 #### redirect()
 The `redirect` function returns a redirect HTTP response and is used to redirect to any other route.
 ```php
-return  redirect('/home');
+return redirect('/home');
 ```
