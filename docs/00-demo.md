@@ -11,7 +11,7 @@ To showcase the capabilities of Elemental, a fully working platform called **[In
 
 Feel free to delve into both the live platform and the corresponding codebase. Explore Inkwell's features to understand how Elemental can be harnessed for your own projects.
 
-See the [inspiration](#inspiration) behind the creation of **Elemental**.
+See the [inspiration](/conclusion) behind the creation of **Elemental**.
 
 ## Why Choose Elemental?
 
