@@ -7,7 +7,7 @@ php candle help
 ```
 This will also display the custom commands that you may have created yourself.
 
- #### Development Server
+### Development Server
 By now, you must have already `ignited` the the Elemental's candle to run your app.  This `ignite`  command serves the app at the IP Address 127.0.0.1, searching for a free port starting from 8000. If Port 8000 is occupied, Elemental automatically attempts to bind to the next available port (e.g., 8001) and so forth.
 
 ```bash
@@ -16,13 +16,13 @@ php candle ignite
 
 You have the flexibility to customize the server setup according to your requirements.
 
-**Custom Host**
+#### Custom Host
 Specify a specific IP address using the `--host` argument. For instance:
 ```bash
 php candle ingite --host=192.168.1.10
 ```
 
-**Custom Port**
+#### Custom Port
 If you prefer binding to a specific port, use the `--port` argument:
 ```bash
 php candle ingite --port=8080
@@ -210,7 +210,6 @@ class Migration extends Command
 
 ```
 
-
 It is recommended to type-hint dependencies inside the handle method as opposed to inside the constructor of the command class.
 
 To execute these migration commands in the command line:
@@ -222,4 +221,4 @@ php candle migrate delete
 
 As you can see, generating commands are very powerful and can be helpful to achieve a variety of functionalities. Here, a custom migration handler has been built. You can expand and organize the above structure or create a custom Migration Service that can handle your migration logic.
 
-Commands can also be used for handling task scheduling. You may create a command that executes some logic, and then pass the command to your operating systems CRON handler.
+Commands can also be used for handling task scheduling. You may create a command that executes some logic and then pass the command to your operating systems CRON handler.
