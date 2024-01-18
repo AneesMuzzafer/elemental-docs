@@ -38,8 +38,10 @@ You can ofcourse return a `view` from a controller. However,  If you need contro
 
 use Core\Response\Response;
 
-class UserController {
-	public function register(Response $response){
+class UserController
+{
+	public function register(Response $response)
+	{
 		$response->setHeader("x-is_register", "true");
 		return view("Register");
 	}
@@ -53,28 +55,28 @@ Keep in mind that most response methods are chainable, allowing for the fluent c
 
 You may set the content of the response by using `setContent` method on the response instance.
 ```php
-	$response->setContent("...");
+$response->setContent("...");
 ```
 
 However, if you want to append to the content of the response, you can do so by using `appendContent` method on the response instance.
 ```php
-	$response->appendContent("...");
+$response->appendContent("...");
 ```
 
 #### Response Header
 
 You may set a header on the response instance by using `setHeader` method
 ```php
-	$response->setHeader("content-type", "text/plain");
+$response->setHeader("content-type", "text/plain");
 ```
 However, if you want to set several headers simultaneously, you can do so by using `setHeaders` method and passing an array of headers.
 ```php
-	$response->setHeaders(["content-type" => "text/html", ...]);
+$response->setHeaders(["content-type" => "text/html", ...]);
 ```
 #### Response Status Code
 You may directly set the status code of the response by using `setHeader` method on the response instance.
 ```php
-	$response->setStatusCode(301);
+$response->setStatusCode(301);
 ```
 A status text will be set by default for the common status codes.
 
@@ -92,7 +94,7 @@ However, for simplicity a helper method `redirect()` is also available globally 
 use Core\Response\Response;
 
 Route::post('/story/create', function  () {
-	if(!some condition)
+	if(!$someCondition)
 		return redirect('/story', 204);
 });
 ```
