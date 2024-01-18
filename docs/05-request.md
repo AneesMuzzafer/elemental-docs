@@ -26,7 +26,7 @@ class CategoryController
 
         Category::create($request->data());
 
-        redirect("/category");
+        return redirect("/category");
     }
 }
 ```
@@ -52,7 +52,8 @@ class StoryController
 {
     public function update(string $id, Request $request)
     {
-        // Update the story...
+        // Update the story.
+
         return redirect("/story/$story->id");
     }
 }
@@ -108,18 +109,18 @@ Be careful when dealing with the raw content of a request.
  #### Files
 You may retrieve the files from the `Core\Request\Request` instance using the `files` method.
 ```php
-$files= $request->files();
+$files = $request->files();
 ```
  #### Request IP Address
 The `ip` method may be used to retrieve the IP address of the client that made the request to your application:
 ```php
-$ipAddress  =  $request->ip();
+$ipAddress = $request->ip();
 ```
 
- #### Port Address
-The `port` method may be used to retrieve the Port address of the client that made the request to your application:
+ #### Port
+The `port` method may be used to retrieve the Port of the client that made the request to your application:
 ```php
-$port=  $request->port();
+$port = $request->port();
 ```
 
  #### Content Type
@@ -131,25 +132,25 @@ $contentType = $request->contentType();
  #### Query String
 You may retrieve the query string of the request using the `queryString` method.
 ```php
-$query= $request->queryString();
+$query = $request->queryString();
 ```
  #### Specific Content Types
 
  ##### Text
 You may retrieve the text content of the request using the `text` method provided the content-type is set to `text/plain`
 ```php
-$text= $request->text();
+$text = $request->text();
 ```
 
  ##### Javascript
 You may retrieve the JS content of the request using the `js` method provided the content-type is set to `application/javascript`
 ```php
-$js= $request->js();
+$js = $request->js();
 ```
  ##### HTML
 You may retrieve the HTML content of the request using the `html` method provided the content-type is set to `text/html`
 ```php
-$js= $request->html();
+$js = $request->html();
 ```
 
  ##### JSON

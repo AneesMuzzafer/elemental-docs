@@ -63,9 +63,10 @@ class UserController
     /**
     * Create a new controller instance.
     */
-    public function __construct(
-        public Database $db,
-    ) {}
+    public function __construct(public Database $db)
+    {
+        //
+    }
 }
 ```
 
