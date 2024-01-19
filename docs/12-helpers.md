@@ -12,7 +12,7 @@ This is pretty useful when you want to register your own services as well as res
 
 ```php
 app()->bind(CustomService::class, function () {
-	return new CustomService(new anotherService());
+    return new CustomService(new anotherService());
 });
 
 $service = app()-make(CustomService::class);
