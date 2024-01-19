@@ -41,7 +41,10 @@ console_log($user, $post, $image, $comment);
 ```
 
 #### router()
-The `router` function returns the returns the `Router` instance.
+The `router` function returns the `Router` instance.
+```php
+$router = router();
+```
 
 #### view()
 The `view` function is used to return a view from the controller method:
