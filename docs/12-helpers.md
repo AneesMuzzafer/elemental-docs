@@ -56,8 +56,8 @@ return view("Login");
 The `component` function is used to return a view as a component to be used inside another view:
 ```php
 <body>
-	<?= component("Logo")?>
-	//...
+    <?= component("Logo")?>
+    //...
 </body>
 ```
 
