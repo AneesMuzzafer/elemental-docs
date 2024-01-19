@@ -21,7 +21,6 @@ Usually, you won't merely return straightforward strings or arrays from your rou
 Returning a full `Response` instance allows you to customize the response's HTTP status code and headers. You can inject the Response instance by type-hinting the Response instance inside your controller or route closure.
 
 ```php
-
 use Core\Response\Response;
 
 Route::get('/home', function(Response $response) {
@@ -32,10 +31,9 @@ Route::get('/home', function(Response $response) {
 	return  response;
 });
 ```
-You can ofcourse return a `view` from a controller. However,  If you need control over the response's status and headers but also need to return a `view` as the response's content, you can do that as following:
+You can of course return a `view` from a controller. However,  If you need control over the response's status and headers but also need to return a `view` as the response's content, you can do that as following:
 
 ```php
-
 use Core\Response\Response;
 
 class UserController
@@ -64,7 +62,6 @@ $response->appendContent("...");
 ```
 
 #### Response Header
-
 You may set a header on the response instance by using `setHeader` method
 ```php
 $response->setHeader("content-type", "text/plain");
@@ -73,6 +70,7 @@ However, if you want to set several headers simultaneously, you can do so by usi
 ```php
 $response->setHeaders(["content-type" => "text/html", ...]);
 ```
+
 #### Response Status Code
 You may directly set the status code of the response by using `setHeader` method on the response instance.
 ```php
@@ -94,8 +92,9 @@ However, for simplicity a helper method `redirect()` is also available globally 
 use Core\Response\Response;
 
 Route::post('/story/create', function  () {
-	if(!$someCondition)
+	if(!$someCondition) {
 		return redirect('/story', 204);
+	}
 });
 ```
 

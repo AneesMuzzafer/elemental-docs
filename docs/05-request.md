@@ -64,13 +64,13 @@ class StoryController
 You may obtain all of the incoming request's input data as an `array` using the `data()` method. This method may be used regardless of whether the incoming request is from an HTML form or is an XHR request:
 
 ```php
-$data =  $request->data();
+$data = $request->data();
 ```
 #### Retrieving an Input Value
 You may access all of the user input from your `Request` instance without worrying about which HTTP verb was used for the request. Regardless of the HTTP verb, the `data` method may be used to retrieve user input:
 
 ```php
-$name=  $request->data()["name"];
+$name = $request->data()["name"];
 ```
 
 ### Request URI, Method and Headers

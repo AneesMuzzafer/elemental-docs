@@ -87,7 +87,7 @@ use App\Models\User;
 
 Route::get("/users/{user}", function  (User  $user) {
 
-return  $user->email;
+return $user->email;
 
 });
 ```
@@ -100,7 +100,7 @@ Sometimes you may wish to resolve models using a column other than `id`. To do s
 use App\Models\User;
 
 Route::get("/users/{user:email}", function  (User $user) {
-    return  $user;
+    return $user;
 });
 ```
 In this scenario, Elemental will seamlessly inject the model instance that possesses an email matching the corresponding value from the request URI.
