@@ -1,7 +1,3 @@
----
-slug: /
----
-
 # Demo (Inkwell)
 
 To showcase the capabilities of Elemental, a fully working platform called **[Inkwell](https://inkwell.anees.dev)** has been developed using Elemental. Inkwell is a unique space dedicated to the pure essence of storytelling. In line with Elemental's goal of having no external dependencies, Inkwell has been crafted using plain HTML, CSS, JS, and PHP only.
