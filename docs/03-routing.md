@@ -86,9 +86,7 @@ In the context of routes or controller actions, models are defined using type-hi
 use App\Models\User;
 
 Route::get("/users/{user}", function  (User  $user) {
-
-return $user->email;
-
+    return $user->email;
 });
 ```
 
